@@ -117,13 +117,13 @@ class _HomePageState extends State<HomePage>
     Permission permission = Permission.microphone;
     PermissionStatus status = await permission.status;
     if (status.isGranted) {
-      TdSipPlugin.call("1907556514130605");
+      TdSipPlugin.call("9123456789");
     } else if (status.isPermanentlyDenied) {
       ///用户点击了 拒绝且不再提示
     } else {
       PermissionStatus newStatus = await permission.request();
       if (newStatus.isGranted) {
-        TdSipPlugin.call("1907556514130605");
+        TdSipPlugin.call("9123456789");
       }
     }
   }
@@ -143,23 +143,23 @@ class _HomePageState extends State<HomePage>
                 height: 20,
               ),
               ElevatedButton(
-                child: Text("登录"),
+                child: Text("register"),
                 onPressed: () {
                   TdSipPlugin.login(
-                      sipID: "1100000004",
-                      sipPassword: "2ebdeb8b65d320b2",
-                      sipDomain: "47.106.186.8",
-                      sipPort: "8060");
+                      sipID: "400",
+                      sipPassword: "400",
+                      sipDomain: "103.26.92.138",
+                      sipPort: "5060");
                 },
               ),
               ElevatedButton(
-                child: Text("退出登录"),
+                child: Text("logout"),
                 onPressed: () {
                   TdSipPlugin.logout();
                 },
               ),
               ElevatedButton(
-                child: Text("呼叫"),
+                child: Text("test call"),
                 onPressed: () {
                   _checkPermission();
                 },
@@ -247,15 +247,33 @@ class _SipPageState extends State<SipPage> with TdSipObserver {
                 ),
               ),
               ElevatedButton(
-                child: Text("挂断"),
+                child: Text("hangup"),
                 onPressed: () {
                   TdSipPlugin.hangup();
                 },
               ),
               ElevatedButton(
-                child: Text("接听"),
+                child: Text("answer"),
                 onPressed: () {
                   TdSipPlugin.answer();
+                },
+              ),
+              ElevatedButton(
+                child: Text("speaker"),
+                onPressed: () {
+                  TdSipPlugin.switchSoundDevice();
+                },
+              ),
+              ElevatedButton(
+                child: Text("mic on"),
+                onPressed: () {
+                  TdSipPlugin.micON();
+                },
+              ),
+              ElevatedButton(
+                child: Text("mic off"),
+                onPressed: () {
+                  TdSipPlugin.micOFF();
                 },
               ),
             ],
