@@ -3,6 +3,7 @@
 # Run `pod lib lint td_sip_plugin.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
+  s.static_framework = true
   s.name             = 'td_sip_plugin'
   s.version          = '0.0.1'
   s.summary          = 'A Flutter plugin for sip belong Trudian.'
@@ -16,7 +17,7 @@ A Flutter plugin for sip belong Trudian.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'TDSip','1.0.0'
+  s.dependency 'TDSip','1.0.1'
   s.platform = :ios, '9.0'
 
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
