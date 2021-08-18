@@ -1,4 +1,4 @@
-package com.mz.td_sip_plugin;
+package com.mz.as2in1;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
