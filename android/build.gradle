@@ -1,4 +1,4 @@
-group 'com.mz.td_sip_plugin'
+group 'com.mz.as2in1'
 version '1.0'
 
 buildscript {
