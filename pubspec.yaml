@@ -27,7 +27,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.mz.td_sip_plugin
+        package: com.mz.as2in1
         pluginClass: TdSipPlugin
       ios:
         pluginClass: TdSipPlugin
